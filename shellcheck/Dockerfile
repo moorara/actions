@@ -17,4 +17,3 @@ RUN wget -q -O shellcheck.tar.xz https://storage.googleapis.com/shellcheck/shell
     shellcheck --version
 
 ENTRYPOINT [ "shellcheck" ]
-CMD [ "**/*.{sh,bash}" ]
