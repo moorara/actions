@@ -12,8 +12,15 @@
 
 ### Checklist
 
+#### General
+
   - [ ] PR title is clear and describes the work
   - [ ] Commit messages are self-explanatory and summarize the change
-  - [ ] Tests are provided for the new change
-  - [ ] [README](../README.md) file is updated
-  - [ ] [CODEOWNERS](./CODEOWNERS) file is updated
+  - [ ] Tests are provided for the new change / The new change is well-tested
+
+#### Actions
+
+  - [ ] The action maintainer in [CODEOWNERS](./CODEOWNERS) is updated
+  - [ ] The new action includes `README.md` / The existing `README.md` file is updated
+  - [ ] The new action `Dockerfile` includes GitHub [labels](https://developer.github.com/actions/creating-github-actions/creating-a-docker-container/#label) /
+        The existing `Dockerfile` [labels](https://developer.github.com/actions/creating-github-actions/creating-a-docker-container/#label) are updated.
