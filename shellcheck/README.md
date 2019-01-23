@@ -1,17 +1,17 @@
-# Shellcheck Action
+# Shell Check
 
 GitHub Action for linting shell scripts and finding possible issues and errors.
-This action uses [ShellCheck](https://github.com/koalaman/shellcheck).
+This action uses [shellcheck](https://github.com/koalaman/shellcheck).
 
 ## Usage
 
 ```hcl
 workflow "Main" {
   on = "push"
-  resolves = [ "ShellCheck" ]
+  resolves = [ "Shell Check" ]
 }
 
-action "ShellCheck" {
+action "Shell Check" {
   uses = "./shellcheck"
 }
 ```

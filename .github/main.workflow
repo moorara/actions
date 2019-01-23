@@ -1,8 +1,12 @@
 workflow "Main" {
   on = "push"
-  resolves = [ "ShellCheck" ]
+  resolves = [ "Shell Check", "Go Meta Linter" ]
 }
 
-action "ShellCheck" {
+action "Shell Check" {
   uses = "./shellcheck"
+}
+
+action "Go Meta Linter" {
+  uses = "./gometalinter"
 }
