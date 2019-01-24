@@ -1,8 +1,14 @@
 workflow "Main" {
   on = "push"
-  resolves = [ "ShellCheck" ]
+  resolves = [ "Shell Check", "Go Meta Linter" ]
 }
 
-action "ShellCheck" {
+action "Shell Check" {
   uses = "./shellcheck"
+  args = "./shellcheck/test/install-shellcheck.sh"
+}
+
+action "Go Meta Linter" {
+  uses = "./gometalinter"
+  args = [ "./gometalinter/test" ]
 }
