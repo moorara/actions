@@ -2,7 +2,7 @@ FROM alpine:3.8
 
 LABEL "com.github.actions.name"="Shell Check"
 LABEL "com.github.actions.description"="Gives warnings and suggestions for bash/sh shell scripts"
-LABEL "com.github.actions.icon"="purple"
+LABEL "com.github.actions.icon"="check"
 LABEL "com.github.actions.color"="green"
 
 LABEL "repository"="http://github.com/moorara/actions"
