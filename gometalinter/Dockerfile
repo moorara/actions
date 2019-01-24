@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM golang:alpine
 
 LABEL "com.github.actions.name"="Go Meta Linter"
 LABEL "com.github.actions.description"="Statically checking Go codes for errors, warnings, and linting issues"
@@ -11,6 +11,9 @@ LABEL "maintainer"="Milad Irannejad <>"
 
 # Install gometalinter (https://github.com/alecthomas/gometalinter)
 RUN wget -qO - https://git.io/vp6lP | sh
+
+# This is a hack to get gometalinter working
+ENV USER=root
 
 ENTRYPOINT [ "gometalinter" ]
 CMD [ "./..." ]
