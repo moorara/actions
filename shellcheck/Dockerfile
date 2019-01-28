@@ -11,9 +11,8 @@ LABEL "maintainer"="Milad Irannejad <>"
 
 # Install shellcheck (https://github.com/koalaman/shellcheck)
 RUN wget -q -O shellcheck.tar.xz https://storage.googleapis.com/shellcheck/shellcheck-stable.linux.x86_64.tar.xz && \
-    tar --xz -xvf shellcheck.tar.xz && \
-    mv shellcheck-stable/shellcheck /usr/local/bin/ && \
-    rm -rf shellcheck.tar.xz shellcheck-stable && \
+    tar --strip-components=1 -C /usr/local/bin/ --xz -xvf shellcheck.tar.xz shellcheck-stable/shellcheck && \
+    rm -rf shellcheck.tar.xz && \
     shellcheck --version
 
 ENTRYPOINT [ "shellcheck" ]
