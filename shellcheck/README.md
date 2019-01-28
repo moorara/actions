@@ -13,9 +13,9 @@ workflow "Main" {
 
 action "Shell Check" {
   uses = "moorara/actions/shellcheck@master"
-  args = [ "path/to/script.sh" ]
+  args = [ "path/to/dir", "path/to/script.sh" ]
 }
 ```
 
 The entrypoint for this action is `shellcheck` command.
-For passing arguments, use `args` in action body.
+For arguments, you can pass a list of files, directories, or both.

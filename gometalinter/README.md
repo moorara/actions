@@ -8,10 +8,10 @@ This action uses [gometalinter](https://github.com/alecthomas/gometalinter).
 ```hcl
 workflow "Main" {
   on = "push"
-  resolves = [ "Go Meta Linter" ]
+  resolves = [ "Go Linting" ]
 }
 
-action "Go Meta Linter" {
+action "Go Linting" {
   uses = "moorara/actions/gometalinter@master"
 }
 ```
