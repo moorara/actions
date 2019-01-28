@@ -12,7 +12,7 @@ workflow "Main" {
 }
 
 action "Go Meta Linter" {
-  uses = "./gometalinter"
+  uses = "moorara/actions/gometalinter@master"
 }
 ```
 
