@@ -12,7 +12,7 @@ workflow "Main" {
 }
 
 action "Shell Check" {
-  uses = "./shellcheck"
+  uses = "moorara/actions/shellcheck@master"
   args = [ "path/to/script.sh" ]
 }
 ```
