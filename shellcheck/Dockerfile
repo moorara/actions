@@ -15,4 +15,5 @@ RUN wget -q -O shellcheck.tar.xz https://storage.googleapis.com/shellcheck/shell
     rm -rf shellcheck.tar.xz && \
     shellcheck --version
 
-ENTRYPOINT [ "shellcheck" ]
+COPY entrypoint.sh /
+ENTRYPOINT [ "/entrypoint.sh" ]
