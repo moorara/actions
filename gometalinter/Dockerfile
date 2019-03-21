@@ -1,4 +1,4 @@
-FROM golang:1.11-alpine
+FROM golang:1.12-alpine
 
 LABEL "com.github.actions.name"="Go Meta Linter"
 LABEL "com.github.actions.description"="Statically checking Go codes for errors, warnings, and linting issues"
