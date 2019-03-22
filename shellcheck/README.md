@@ -8,10 +8,10 @@ This action uses [ShellCheck](https://github.com/koalaman/shellcheck).
 ```hcl
 workflow "Main" {
   on = "push"
-  resolves = [ "Shell Check" ]
+  resolves = [ "Shell Linting" ]
 }
 
-action "Shell Check" {
+action "Shell Linting" {
   uses = "moorara/actions/shellcheck@master"
   args = [ "path/to/dir", "path/to/script.sh" ]
 }
