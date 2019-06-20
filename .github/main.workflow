@@ -5,13 +5,18 @@
 
 workflow "Main" {
   on = "push"
-  resolves = [ "Docker Build", "Go Linting", "Shell Linting" ]
+  resolves = [ "Docker Build", "Go Cover", "Go Linting", "Shell Linting" ]
 }
 
 action "Docker Build" {
   uses = "./docker"
   runs = [ "sh", "-c" ]
   args = [ "cd docker/test && make build" ]
+}
+
+action "Go Cover" {
+  uses = "./golang-cover"
+  args = [ "./golang-cover/test" ]
 }
 
 action "Go Linting" {
