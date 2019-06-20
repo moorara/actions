@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:3.10
 
 LABEL "com.github.actions.name"="ShellCheck"
 LABEL "com.github.actions.description"="Gives warnings and suggestions for bash/sh shell scripts"
