@@ -9,6 +9,6 @@ LABEL "repository"="http://github.com/moorara/actions"
 LABEL "homepage"="http://github.com/moorara/actions"
 LABEL "maintainer"="Milad Irannejad <>"
 
-ADD entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "./..." ]
