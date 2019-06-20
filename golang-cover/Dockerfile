@@ -5,8 +5,8 @@ LABEL "com.github.actions.description"="Running tests and generating coverage pr
 LABEL "com.github.actions.icon"="umberella"
 LABEL "com.github.actions.color"="blue"
 
-LABEL "repository"="http://github.com/moorara/goto"
-LABEL "homepage"="http://github.com/moorara/goto"
+LABEL "repository"="http://github.com/moorara/actions"
+LABEL "homepage"="http://github.com/moorara/actions"
 LABEL "maintainer"="Milad Irannejad <>"
 
 ADD entrypoint.sh /entrypoint.sh
