@@ -1,4 +1,4 @@
-FROM golang:1.12-alpine
+FROM golang:1.13-alpine
 
 LABEL "com.github.actions.name"="GolangCI-Lint"
 LABEL "com.github.actions.description"="Statically checking Go codes for errors, warnings, and linting issues"
