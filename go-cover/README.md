@@ -8,6 +8,11 @@ The following services are currently supported:
 
 ## Inputs
 
+### `path`
+
+The path of the directory containing `*.go` and `*_test.go` files.
+The default path is `./...`.
+
 ### `codecov_token`
 
 If set, coverage report will be sent to [Codecov](https://codecov.io) using this _token_.
@@ -16,7 +21,20 @@ If set, coverage report will be sent to [Codecov](https://codecov.io) using this
 
 If set, coverage report will be sent to [Code Climate](https://codeclimate.com) using this _test reporter id_.
 
-## Example Usage
+## Example Usages
+
+```yaml
+name: Main
+on: push
+jobs:
+  test-cover:
+    name: Test Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Go Cover
+        uses: ./go-cover
+```
 
 ```yaml
 name: Main

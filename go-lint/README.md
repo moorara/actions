@@ -10,8 +10,8 @@ You can change the default arguments using `with.args` key.
 
 ### `path`
 
-The root path of the directory containing `*.go` files.
-The default is `./...`.
+The path of the directory containing `*.go` files.
+The default path is `./...`.
 
 ### `new`
 
@@ -25,7 +25,7 @@ please take a look at `golangci` command help [here](https://github.com/golangci
 
 The timeout for total work. The default value is `2m` (two minutes).
 
-## Example Usage
+## Example Usages
 
 ```yaml
 name: Main

@@ -7,9 +7,22 @@ This action uses [ShellCheck](https://github.com/koalaman/shellcheck).
 
 ### `path`
 
-**Required** The path to a directory or file that contains shell scripts with `.sh` extension.
+The path to a directory or file that contains shell scripts with `.sh` extension.
 
-## Example Usage
+## Example Usages
+
+```yaml
+name: Main
+on: push
+jobs:
+  lint-scripts:
+    name: Lint Scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: ShellCheck
+        uses: moorara/actions/shellcheck
+```
 
 ```yaml
 name: Main
