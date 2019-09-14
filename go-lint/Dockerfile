@@ -7,5 +7,5 @@ LABEL "maintainer"="Milad Irannejad <>"
 # Install golangci-lint (https://github.com/golangci/golangci-lint)
 RUN wget -qO - https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s latest
 
-COPY entrypoint.sh /
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "golangci-lint" ]
+CMD [ "run", "./..." ]

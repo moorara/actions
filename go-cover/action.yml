@@ -2,6 +2,10 @@ name: Go Cover
 author: Milad Irannejad
 description: GitHub Action for running go test command, generating coverage reports, and sending coverage reports.
 inputs:
+  path:
+    description: The root path of the directory containing Go files.
+    required: false
+    default: ./...
   codecov_token:
     description: The Codecov token for sending coverage reports.
     required: false
@@ -11,6 +15,8 @@ inputs:
 runs:
   using: docker
   image: Dockerfile
+  args:
+    - ${{ inputs.path }}
 branding:
   icon: umberella
   color: green

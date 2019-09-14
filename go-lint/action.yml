@@ -3,7 +3,7 @@ author: Milad Irannejad
 description: GitHub Action for static code analysis of Go codes for errors, warnings, and linting issues.
 inputs:
   path:
-    description: The root path of the directory containing Go codes.
+    description: The root path of the directory containing Go files.
     required: false
     default: ./...
   new:
@@ -17,6 +17,10 @@ inputs:
 runs:
   using: docker
   image: Dockerfile
+  args:
+    - run
+    - --new=${{ inputs.new }}
+    - --deadline=${{ inputs.deadline }}
 branding:
   icon: check
   color: purple
