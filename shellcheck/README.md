@@ -1,21 +1,27 @@
-# Shell Check
+# ShellCheck Action
 
 GitHub Action for linting shell scripts and finding possible issues and errors.
 This action uses [ShellCheck](https://github.com/koalaman/shellcheck).
 
-## Usage
+## Inputs
 
-```hcl
-workflow "Main" {
-  on = "push"
-  resolves = [ "Shell Linting" ]
-}
+### `path`
 
-action "Shell Linting" {
-  uses = "moorara/actions/shellcheck@master"
-  args = [ "path/to/dir", "path/to/script.sh" ]
-}
+**Required** The path to a directory or file that contains shell scripts with `.sh` extension.
+
+## Example Usages
+
+```yaml
+name: Main
+on: push
+jobs:
+  lint-scripts:
+    name: Lint Scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: ShellCheck
+        uses: moorara/actions/shellcheck
+        with:
+          path: './scripts'
 ```
-
-The entrypoint for this action is `shellcheck` command.
-For arguments, you can pass a list of files, directories, or both.

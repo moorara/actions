@@ -1,3 +1,4 @@
 # Contributing
 
-Contribution is easy! Submit a Pull Request and make sure all lights are green!
+Contributions are through [**issues**](https://github.com/moorara/algo/issues)
+and [**pull requests**](https://github.com/moorara/algo/pulls).

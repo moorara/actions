@@ -1,0 +1,16 @@
+name: ShellCheck
+author: Milad Irannejad
+description: GitHub action for linting shell scripts.
+inputs:
+  path:
+    description: The path to a directory or file.
+    required: true
+    default: .
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.path }}
+branding:
+  icon: check
+  color: purple

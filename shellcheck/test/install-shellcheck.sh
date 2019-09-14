@@ -10,7 +10,7 @@
 #   ./install-shellcheck.sh --version 0.6.0
 #
 
-set -euo pipefail
+set -eu
 
 
 process_args() {
