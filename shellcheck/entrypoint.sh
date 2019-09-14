@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-set -euo pipefail
+set -eu  # -o pipefail
 
 
 shellcheck_on_file() {
@@ -11,7 +11,6 @@ shellcheck_on_file() {
 shellcheck_on_dir() {
   dir=$1
   find "$dir" -name "*.sh" | xargs shellcheck
-  # find "$dir" -name "*.bash" | xargs shellcheck
 }
 
 process_args() {

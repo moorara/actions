@@ -1,0 +1,28 @@
+name: Main
+on: push
+jobs:
+  go-cover:
+    name: Test go-cover
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Go Cover
+        uses: ./go-cover
+  go-lint:
+    name: Test go-lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Go Lint
+        uses: ./go-lint
+        with:
+          path: ./go-lint/test
+  shellcheck:
+    name: Test shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: ShellCheck
+        uses: ./shellcheck
+        with:
+          path: ./shellcheck/test

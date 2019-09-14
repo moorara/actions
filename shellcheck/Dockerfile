@@ -1,12 +1,7 @@
 FROM alpine:3.10
 
-LABEL "com.github.actions.name"="ShellCheck"
-LABEL "com.github.actions.description"="Gives warnings and suggestions for bash/sh shell scripts"
-LABEL "com.github.actions.icon"="check"
-LABEL "com.github.actions.color"="green"
-
-LABEL "repository"="http://github.com/moorara/actions"
-LABEL "homepage"="http://github.com/moorara/actions"
+LABEL "repository"="https://github.com/moorara/actions"
+LABEL "homepage"="https://github.com/moorara/actions/tree/master/shellcheck"
 LABEL "maintainer"="Milad Irannejad <>"
 
 # Install shellcheck (https://github.com/koalaman/shellcheck)

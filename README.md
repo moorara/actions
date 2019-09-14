@@ -4,4 +4,5 @@ A collection of common and reusable [GitHub Actions](https://github.com/features
 
 ## Development
 
-Make sure you have read the official documentation for [GitHub Actions](https://developer.github.com/actions).
+You can read the official documentation for
+[GitHub Actions](https://help.github.com/en/categories/automating-your-workflow-with-github-actions).
