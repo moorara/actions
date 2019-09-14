@@ -1,4 +1,4 @@
-FROM golang:1.13-alpine
+FROM golang:1.13
 
 LABEL "repository"="https://github.com/moorara/actions"
 LABEL "homepage"="https://github.com/moorara/actions/tree/master/go-lint"
