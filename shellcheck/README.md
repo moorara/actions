@@ -9,7 +9,7 @@ This action uses [ShellCheck](https://github.com/koalaman/shellcheck).
 
 **Required** The path to a directory or file that contains shell scripts with `.sh` extension.
 
-## Example Usages
+## Example Usage
 
 ```yaml
 name: Main
@@ -23,5 +23,5 @@ jobs:
       - name: ShellCheck
         uses: moorara/actions/shellcheck
         with:
-          path: './scripts'
+          path: ./scripts
 ```
