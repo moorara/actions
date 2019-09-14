@@ -1,0 +1,16 @@
+name: Go Cover
+author: Milad Irannejad
+description: GitHub Action for running go test command, generating coverage reports, and sending coverage reports.
+inputs:
+  codecov_token:
+    description: The Codecov token for sending coverage reports.
+    required: false
+  codeclimate_reporter_id:
+    description: The Code Climate test reporter ID for sending coverage reports.
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: umberella
+  color: green

@@ -1,6 +1,13 @@
 name: Main
 on: push
 jobs:
+  go-cover:
+    name: Test go-cover
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Go Cover
+        uses: ./go-cover
   shellcheck:
     name: Test shellcheck
     runs-on: ubuntu-latest
