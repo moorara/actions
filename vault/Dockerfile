@@ -28,5 +28,4 @@ RUN apk add --no-cache ca-certificates gnupg unzip && \
 FROM alpine:3.10
 
 COPY --from=builder "/usr/local/bin/${project}" /usr/local/bin/
-
 ENTRYPOINT [ "vault" ]
