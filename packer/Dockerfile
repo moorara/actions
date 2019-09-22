@@ -27,6 +27,7 @@ RUN apk add --no-cache ca-certificates gnupg unzip && \
 # STAGE 2: Final
 FROM alpine:3.10
 
-COPY --from=builder "/usr/local/bin/${project}" /usr/local/bin/
+RUN apk add --no-cache make
 
+COPY --from=builder "/usr/local/bin/${project}" /usr/local/bin/
 ENTRYPOINT [ "packer" ]
