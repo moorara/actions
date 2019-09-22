@@ -2,12 +2,12 @@
 FROM alpine:3.10 AS builder
 
 LABEL "repository"="https://github.com/moorara/actions"
-LABEL "homepage"="https://github.com/moorara/actions/tree/master/packer"
+LABEL "homepage"="https://github.com/moorara/actions/tree/master/terraform"
 LABEL "maintainer"="Milad Irannejad <>"
 
 ENV os=linux
 ENV arch=amd64
-ENV project=packer
+ENV project=terraform
 
 COPY hashicorp.asc .
 RUN apk add --no-cache ca-certificates gnupg unzip && \
@@ -27,6 +27,10 @@ RUN apk add --no-cache ca-certificates gnupg unzip && \
 # STAGE 2: Final
 FROM alpine:3.10
 
+# Required by terraform
+RUN apk add --no-cache curl
+
 COPY --from=builder "/usr/local/bin/${project}" /usr/local/bin/
 
-ENTRYPOINT [ "packer" ]
+COPY entrypoint.sh /
+ENTRYPOINT [ "/entrypoint.sh" ]

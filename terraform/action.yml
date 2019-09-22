@@ -1,0 +1,14 @@
+name: Terraform
+author: Milad Irannejad
+description: GitHub action for HashiCorp Terraform.
+inputs:
+  path:
+    description: The path to the Terraform project.
+    required: false
+    default: .
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: layers
+  color: gray-dark
