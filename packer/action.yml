@@ -1,0 +1,9 @@
+name: Packer
+author: Milad Irannejad
+description: GitHub action for HashiCorp Packer.
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: package
+  color: gray-dark

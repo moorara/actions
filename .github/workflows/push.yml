@@ -1,6 +1,15 @@
 name: Main
 on: push
 jobs:
+  shellcheck:
+    name: Test shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: ShellCheck
+        uses: ./shellcheck
+        with:
+          path: ./shellcheck/test
   go-cover:
     name: Test go-cover
     runs-on: ubuntu-latest
@@ -17,12 +26,12 @@ jobs:
         uses: ./go-lint
         with:
           path: ./go-lint/test
-  shellcheck:
-    name: Test shellcheck
+  packer:
+    name: Test packer
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: ShellCheck
-        uses: ./shellcheck
+      - name: Packer
+        uses: ./packer
         with:
-          path: ./shellcheck/test
+          args: validate -syntax-only ./packer/test/ubuntu.json

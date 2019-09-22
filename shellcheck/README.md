@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: ShellCheck
-        uses: moorara/actions/shellcheck
+        uses: moorara/actions/shellcheck@master
 ```
 
 ```yaml
@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: ShellCheck
-        uses: moorara/actions/shellcheck
+        uses: moorara/actions/shellcheck@master
         with:
           path: ./scripts
 ```
