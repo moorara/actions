@@ -27,8 +27,7 @@ RUN apk add --no-cache ca-certificates gnupg unzip && \
 # STAGE 2: Final
 FROM alpine:3.10
 
-# Required by terraform
-RUN apk add --no-cache curl
+RUN apk add --no-cache make curl
 
 COPY --from=builder "/usr/local/bin/${project}" /usr/local/bin/
 
