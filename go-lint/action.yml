@@ -21,6 +21,7 @@ runs:
     - run
     - --new=${{ inputs.new }}
     - --deadline=${{ inputs.deadline }}
+    - ${{ inputs.path }}
 branding:
   icon: check
   color: purple
