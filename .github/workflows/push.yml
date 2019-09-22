@@ -45,3 +45,12 @@ jobs:
         with:
           path: ./terraform/test
           args: validate
+  vault:
+    name: Test vault
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Vault
+        uses: ./vault
+        with:
+          args: version
