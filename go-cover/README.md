@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Go Cover
-        uses: ./go-cover
+        uses: moorara/actions/go-cover@master
 ```
 
 ```yaml
@@ -46,7 +46,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Go Cover
-        uses: ./go-cover
+        uses: moorara/actions/go-cover@master
         with:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 ```
@@ -61,7 +61,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Go Cover
-        uses: ./go-cover
+        uses: moorara/actions/go-cover@master
         with:
           codeclimate_reporter_id: ${{ secrets.CODECLIMATE_REPORTER_ID }}
 ```

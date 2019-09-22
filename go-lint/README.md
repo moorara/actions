@@ -37,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Go Lint
-        uses: ./go-lint
+        uses: moorara/actions/go-lint@master
 ```
 
 ```yaml
@@ -50,7 +50,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Go Lint
-        uses: ./go-lint
+        uses: moorara/actions/go-lint@master
         with:
           path: ./project
 ```
@@ -65,7 +65,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Go Lint
-        uses: ./go-lint
+        uses: moorara/actions/go-lint@master
         with:
           args: run ./project
 ```
