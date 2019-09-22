@@ -1,0 +1,9 @@
+name: Vault
+author: Milad Irannejad
+description: GitHub action for HashiCorp Vault.
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: shield
+  color: gray-dark
