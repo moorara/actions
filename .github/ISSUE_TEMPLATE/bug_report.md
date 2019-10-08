@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a bug for this package/library
+about: Report a bug for an action
 title: ''
 labels: bug
 assignees: ''

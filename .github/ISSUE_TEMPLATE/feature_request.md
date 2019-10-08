@@ -1,6 +1,6 @@
 ---
 name: Feature Request
-about: Suggest an idea for this package/library
+about: Suggest an idea for an existing or a new action
 title: ''
 labels: ''
 assignees: ''
