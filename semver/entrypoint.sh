@@ -1,6 +1,6 @@
-#!/bin/sh -l
+#!/bin/bash -l
 
-set -eu  # -o pipefail
+set -eu -o pipefail
 
 
 create_semver() {
