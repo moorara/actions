@@ -1,6 +1,15 @@
 name: Main
 on: push
 jobs:
+  semver:
+    name: Test semver
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: SemVer
+        uses: ./semver
+        with:
+          path: ./semver/test/VERSION
   shellcheck:
     name: Test shellcheck
     runs-on: ubuntu-latest
