@@ -1,0 +1,22 @@
+name: SemVer
+author: Milad Irannejad
+description: GitHub action for writing semantic versions.
+inputs:
+  file:
+    description: The path to a text file containing a semantic version.
+    required: false
+    default: VERSION
+  prerelease:
+    description: A pre-release version as defined in SemVer spec 2.0 (a series of dot separated identifiers).
+    required: false
+    default: ""
+  metadata:
+    description: The build metadata as defined in SemVer spec 2.0 (a series of dot separated identifiers).
+    required: false
+    default: ""
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: hash
+  color: blue
