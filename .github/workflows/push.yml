@@ -9,7 +9,7 @@ jobs:
       - name: SemVer
         uses: ./semver
         with:
-          path: ./semver/test/VERSION
+          file: ./semver/test/VERSION
   shellcheck:
     name: Test shellcheck
     runs-on: ubuntu-latest
