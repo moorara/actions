@@ -3,6 +3,9 @@
 set -euo pipefail
 
 
+# Changing working directory to input path
+cd "$INPUT_PATH"
+
 # These two environment variables are read by Code Climate test reporter
 # See https://docs.codeclimate.com/docs/test-coverage-troubleshooting-branch-names
 # String operators: # deletes the shortest possible match from the left
@@ -14,7 +17,7 @@ export GIT_BRANCH="${GITHUB_REF#refs/heads/}"
 [ -n "$INPUT_CODECLIMATE_REPORTER_ID" ] && test-reporter before-build
 
 # Run go test command ...
-go test -race -cover -covermode=atomic -coverprofile=c.out "$*"
+go test -race -cover -covermode=atomic -coverprofile=c.out ./...
 exit_code=$?
 
 # Run if codeclimate_reporter_id input is set

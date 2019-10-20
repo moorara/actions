@@ -26,6 +26,8 @@ jobs:
       - uses: actions/checkout@master
       - name: Go Cover
         uses: ./go-cover
+        with:
+          path: ./go-cover/test
   go-lint:
     name: Test go-lint
     runs-on: ubuntu-latest
