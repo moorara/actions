@@ -10,4 +10,3 @@ RUN wget -q -O /usr/local/bin/test-reporter https://codeclimate.com/downloads/te
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
-CMD [ "./..." ]
