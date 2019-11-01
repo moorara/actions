@@ -1,0 +1,15 @@
+name: Packer
+on:
+  push:
+    paths:
+      - 'packer/**'
+jobs:
+  packer:
+    name: Test packer
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Packer
+        uses: ./packer
+        with:
+          args: validate -syntax-only ./packer/test/ubuntu.json
