@@ -1,0 +1,15 @@
+name: SemVer
+on:
+  push:
+    paths:
+      - 'semver/**'
+jobs:
+  semver:
+    name: Test semver
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: SemVer
+        uses: ./semver
+        with:
+          file: ./semver/test/VERSION

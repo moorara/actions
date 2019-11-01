@@ -1,0 +1,15 @@
+name: Vault
+on:
+  push:
+    paths:
+      - 'vault/**'
+jobs:
+  vault:
+    name: Test vault
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Vault
+        uses: ./vault
+        with:
+          args: version

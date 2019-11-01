@@ -1,0 +1,15 @@
+name: Go Cover
+on:
+  push:
+    paths:
+      - 'go-cover/**'
+jobs:
+  go-cover:
+    name: Test go-cover
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Go Cover
+        uses: ./go-cover
+        with:
+          path: ./go-cover/test

@@ -1,0 +1,15 @@
+name: Go Lint
+on:
+  push:
+    paths:
+      - 'go-lint/**'
+jobs:
+  go-lint:
+    name: Test go-lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Go Lint
+        uses: ./go-lint
+        with:
+          path: ./go-lint/test
