@@ -37,6 +37,15 @@ jobs:
         uses: ./go-lint
         with:
           path: ./go-lint/test
+  cherry:
+    name: Test cherry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Cherry Build
+        uses: ./cherry
+        with:
+          args: -version
   packer:
     name: Test packer
     runs-on: ubuntu-latest
