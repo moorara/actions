@@ -21,6 +21,18 @@ If set, coverage report will be sent to [Codecov](https://codecov.io) using this
 
 If set, coverage report will be sent to [Code Climate](https://codeclimate.com) using this _test reporter id_.
 
+## Outputs
+
+### `coverage_profile_file`
+
+The path to coverage profile file.
+This is a machine-readable file.
+
+### `coverage_report_file`
+
+The path to coverage report file.
+This is a human-readable file.
+
 ## Example Usages
 
 ```yaml
@@ -64,4 +76,23 @@ jobs:
         uses: moorara/actions/go-cover@master
         with:
           codeclimate_reporter_id: ${{ secrets.CODECLIMATE_REPORTER_ID }}
+```
+
+```yaml
+name: Main
+on: push
+jobs:
+  test-cover:
+    name: Test Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Go Cover
+        id: cover
+        uses: moorara/actions/go-cover@master
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v1
+        with:
+          name: coverage-report
+          path: {{ steps.cover.outputs.coverage_report_file }}
 ```

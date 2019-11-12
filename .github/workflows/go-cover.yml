@@ -10,6 +10,12 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Go Cover
+        id: cover
         uses: ./go-cover
         with:
           path: ./go-cover/test
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v1
+        with:
+          name: coverage-report
+          path: ./go-cover/test/${{ steps.cover.outputs.coverage_report_file }}

@@ -28,3 +28,7 @@ exit_code=$?
 
 # Generate HTML coverage report
 go tool cover -html=c.out -o cover.html
+
+# Set action output parameters
+echo "::set-output name=coverage_profile_file::./c.out"
+echo "::set-output name=coverage_report_file::./cover.html"
