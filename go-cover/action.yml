@@ -12,6 +12,11 @@ inputs:
   codeclimate_reporter_id:
     description: The Code Climate test reporter ID for sending coverage reports.
     required: false
+outputs:
+  coverage_profile_file:
+    description: The path to coverage profile file.
+  coverage_report_file:
+    description: The path to coverage report file.
 runs:
   using: docker
   image: Dockerfile
