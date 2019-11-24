@@ -28,8 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Write Semantic Version
-        uses: moorara/actions/semver@master
+      - uses: moorara/actions/semver@master
 ```
 
 ```yaml
@@ -41,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Write Semantic Version
+      - name: Semantic Versioning
         uses: moorara/actions/semver@master
         with:
           file: VERSION
@@ -56,7 +55,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Write Semantic Version
+      - name: Semantic Versioning
+        uses: flybits/actions/semver@master
+        with:
+          file: package.json
+```
+
+```yaml
+name: Main
+on: push
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Semantic Versioning
         uses: moorara/actions/semver@master
         with:
           file: VERSION
