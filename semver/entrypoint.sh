@@ -28,10 +28,17 @@ create_semver() {
 }
 
 update_text_file() {
-  semver=$(cat "$INPUT_FILE")
-  create_semver
-  echo "$semver"
-  echo "$semver" > "$INPUT_FILE"
+  if [[ "$INPUT_FILE" == *.json ]]; then
+    semver=$(cat "$INPUT_FILE" | jq -r .version)
+    create_semver
+    sed -i -e "s/\\\"version\\\": \\\"[0-9.-]*\\\"/\\\"version\\\": \\\"$semver\\\"/g" "$INPUT_FILE"
+    cat "$INPUT_FILE" | jq -r .version
+  else
+    semver=$(cat "$INPUT_FILE")
+    create_semver
+    echo "$semver" > "$INPUT_FILE"
+    cat "$INPUT_FILE"
+  fi
 }
 
 
