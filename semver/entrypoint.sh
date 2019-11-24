@@ -19,6 +19,9 @@ create_semver() {
   # Default pre-release version
   if [[ -z "$suffix" ]]; then
     suffix="-$(git rev-parse --short HEAD)"
+    if [[ "$(git rev-parse --abbrev-ref HEAD)" != "master" ]]; then
+      suffix+=".dev"
+    fi
   fi
 
   semver=${semver/-0/$suffix}
