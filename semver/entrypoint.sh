@@ -39,6 +39,9 @@ update_text_file() {
     echo "$semver" > "$INPUT_FILE"
     cat "$INPUT_FILE"
   fi
+
+  # Set action output parameters
+  echo "::set-output name=semver::$semver"
 }
 
 
