@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.11
 
 LABEL "repository"="https://github.com/moorara/actions"
 LABEL "homepage"="https://github.com/moorara/actions/tree/master/shellcheck"
