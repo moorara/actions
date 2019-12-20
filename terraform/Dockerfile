@@ -1,5 +1,5 @@
 # STAGE 1: Build
-FROM alpine:3.10 AS builder
+FROM alpine:3.11 AS builder
 
 LABEL "repository"="https://github.com/moorara/actions"
 LABEL "homepage"="https://github.com/moorara/actions/tree/master/terraform"
@@ -25,7 +25,7 @@ RUN apk add --no-cache ca-certificates gnupg unzip && \
     rm "${project}_${version}_SHA256SUMS" "${project}_${version}_SHA256SUMS.sig" "${project}_${version}_${os}_${arch}.zip"
 
 # STAGE 2: Final
-FROM alpine:3.10
+FROM alpine:3.11
 
 RUN apk add --no-cache make curl openssh
 
