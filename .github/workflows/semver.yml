@@ -1,0 +1,17 @@
+name: SemVer
+on:
+  push:
+    paths:
+      - 'semver/**'
+jobs:
+  semver:
+    name: Test semver
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+      - name: Semantic Versioning
+        id: semver
+        uses: ./semver
+      - run: echo "${{ steps.semver.outputs.version }}"

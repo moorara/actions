@@ -1,0 +1,14 @@
+FROM alpine:3.12
+
+LABEL "repository"="https://github.com/moorara/actions"
+LABEL "homepage"="https://github.com/moorara/actions/tree/master/semver"
+LABEL "maintainer"="Milad Irannejad <>"
+
+# Install dependencies
+RUN apk add --no-cache git
+
+# Install Cherry
+RUN wget -qO - https://git.io/JeCX6 | sh
+
+COPY entrypoint.sh /
+ENTRYPOINT [ "/entrypoint.sh" ]
