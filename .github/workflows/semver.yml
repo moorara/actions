@@ -14,4 +14,5 @@ jobs:
       - name: Semantic Versioning
         id: semver
         uses: ./semver
-      - run: echo "${{ steps.semver.outputs.version }}"
+      - name: Print Version
+        run: echo "${{ steps.semver.outputs.version }}"
