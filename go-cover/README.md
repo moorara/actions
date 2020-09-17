@@ -91,7 +91,7 @@ jobs:
         id: cover
         uses: moorara/actions/go-cover@master
       - name: Upload Test Report
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: coverage-report
           path: {{ steps.cover.outputs.coverage_report_file }}
