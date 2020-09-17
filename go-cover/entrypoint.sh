@@ -27,8 +27,8 @@ exit_code=$?
 [ -n "$INPUT_CODECOV_TOKEN" ] && bash <(curl -s https://codecov.io/bash) -f c.out -t "$INPUT_CODECOV_TOKEN"
 
 # Generate HTML coverage report
-go tool cover -html=c.out -o cover.html
+go tool cover -html=c.out -o coverage.html
 
 # Set action output parameters
 echo "::set-output name=coverage_profile_file::c.out"
-echo "::set-output name=coverage_report_file::cover.html"
+echo "::set-output name=coverage_report_file::coverage.html"
