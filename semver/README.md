@@ -21,10 +21,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: moorara/actions/semver@master
+      - uses: moorara/actions/semver@main
 ```
 
 ```yaml
@@ -35,11 +35,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - name: Semantic Versioning
-        uses: moorara/actions/semver@master
+        uses: moorara/actions/semver@main
         with:
           file: VERSION
 ```

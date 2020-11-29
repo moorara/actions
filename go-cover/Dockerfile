@@ -1,7 +1,7 @@
 FROM golang:1.15
 
 LABEL "repository"="https://github.com/moorara/actions"
-LABEL "homepage"="https://github.com/moorara/actions/tree/master/go-cover"
+LABEL "homepage"="https://github.com/moorara/actions/tree/main/go-cover"
 LABEL "maintainer"="Milad Irannejad <>"
 
 # Install Code Climate test-reporter

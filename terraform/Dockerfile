@@ -2,7 +2,7 @@
 FROM alpine:3.12 AS builder
 
 LABEL "repository"="https://github.com/moorara/actions"
-LABEL "homepage"="https://github.com/moorara/actions/tree/master/terraform"
+LABEL "homepage"="https://github.com/moorara/actions/tree/main/terraform"
 LABEL "maintainer"="Milad Irannejad <>"
 
 ENV os=linux

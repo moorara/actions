@@ -14,9 +14,9 @@ jobs:
     name: Vault
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Version
-        uses: moorara/actions/vault@master
+        uses: moorara/actions/vault@main
         with:
           args: version
 ```

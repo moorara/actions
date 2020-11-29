@@ -14,9 +14,9 @@ jobs:
     name: Packer
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Validate
-        uses: moorara/actions/packer@master
+        uses: moorara/actions/packer@main
         with:
           args: validate -syntax-only ./packer/test/ubuntu.json
 ```

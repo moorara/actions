@@ -19,9 +19,9 @@ jobs:
     name: Lint Scripts
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: ShellCheck
-        uses: moorara/actions/shellcheck@master
+        uses: moorara/actions/shellcheck@main
 ```
 
 ```yaml
@@ -32,9 +32,9 @@ jobs:
     name: Lint Scripts
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: ShellCheck
-        uses: moorara/actions/shellcheck@master
+        uses: moorara/actions/shellcheck@main
         with:
           path: ./scripts
 ```

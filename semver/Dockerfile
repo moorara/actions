@@ -1,7 +1,7 @@
 FROM alpine:3.12
 
 LABEL "repository"="https://github.com/moorara/actions"
-LABEL "homepage"="https://github.com/moorara/actions/tree/master/semver"
+LABEL "homepage"="https://github.com/moorara/actions/tree/main/semver"
 LABEL "maintainer"="Milad Irannejad <>"
 
 # Install dependencies

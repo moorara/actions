@@ -35,9 +35,9 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Go Lint
-        uses: moorara/actions/go-lint@master
+        uses: moorara/actions/go-lint@main
 ```
 
 ```yaml
@@ -48,9 +48,9 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Go Lint
-        uses: moorara/actions/go-lint@master
+        uses: moorara/actions/go-lint@main
         with:
           path: ./project
 ```
@@ -63,9 +63,9 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Go Lint
-        uses: moorara/actions/go-lint@master
+        uses: moorara/actions/go-lint@main
         with:
           args: run ./project
 ```

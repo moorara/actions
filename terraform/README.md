@@ -18,9 +18,9 @@ jobs:
     name: Terraform
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Validate
-        uses: moorara/actions/terraform@master
+        uses: moorara/actions/terraform@main
         with:
           args: validate
 ```
@@ -33,9 +33,9 @@ jobs:
     name: Terraform
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Validate
-        uses: moorara/actions/terraform@master
+        uses: moorara/actions/terraform@main
         with:
           path: ./project
           args: validate

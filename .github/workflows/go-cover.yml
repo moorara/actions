@@ -8,7 +8,7 @@ jobs:
     name: Test go-cover
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Go Cover
         id: cover
         uses: ./go-cover

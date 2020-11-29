@@ -1,7 +1,7 @@
 FROM alpine:3.12
 
 LABEL "repository"="https://github.com/moorara/actions"
-LABEL "homepage"="https://github.com/moorara/actions/tree/master/shellcheck"
+LABEL "homepage"="https://github.com/moorara/actions/tree/main/shellcheck"
 LABEL "maintainer"="Milad Irannejad <>"
 
 # Install shellcheck (https://github.com/koalaman/shellcheck)

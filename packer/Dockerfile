@@ -2,7 +2,7 @@
 FROM alpine:3.12 AS builder
 
 LABEL "repository"="https://github.com/moorara/actions"
-LABEL "homepage"="https://github.com/moorara/actions/tree/master/packer"
+LABEL "homepage"="https://github.com/moorara/actions/tree/main/packer"
 LABEL "maintainer"="Milad Irannejad <>"
 
 ENV os=linux

@@ -43,9 +43,9 @@ jobs:
     name: Test Coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Go Cover
-        uses: moorara/actions/go-cover@master
+        uses: moorara/actions/go-cover@main
 ```
 
 ```yaml
@@ -56,9 +56,9 @@ jobs:
     name: Test Coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Go Cover
-        uses: moorara/actions/go-cover@master
+        uses: moorara/actions/go-cover@main
         with:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
 ```
@@ -71,9 +71,9 @@ jobs:
     name: Test Coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Go Cover
-        uses: moorara/actions/go-cover@master
+        uses: moorara/actions/go-cover@main
         with:
           codeclimate_reporter_id: ${{ secrets.CODECLIMATE_REPORTER_ID }}
 ```
@@ -86,10 +86,10 @@ jobs:
     name: Test Coverage
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Go Cover
         id: cover
-        uses: moorara/actions/go-cover@master
+        uses: moorara/actions/go-cover@main
       - name: Upload Test Report
         uses: actions/upload-artifact@v2
         with:
