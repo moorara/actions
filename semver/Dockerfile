@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.13
 
 LABEL "repository"="https://github.com/moorara/actions"
 LABEL "homepage"="https://github.com/moorara/actions/tree/main/semver"
