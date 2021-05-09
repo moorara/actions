@@ -1,4 +1,4 @@
-FROM golang:1.15
+FROM golang:1.16
 
 LABEL "repository"="https://github.com/moorara/actions"
 LABEL "homepage"="https://github.com/moorara/actions/tree/main/go-lint"
